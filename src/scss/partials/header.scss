@@ -1,8 +1,12 @@
-@use "../global/variables.scss" as *;
-@use "../global/mixins.scss" as *;
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
 
 header {
-  background: $light-grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $text-pink;
   ul {
     @include clear-list;
   }

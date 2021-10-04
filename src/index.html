@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Joshua Tree Trip</title>
   </head>
-  <body>
-    <div>
-      <h1><%= htmlWebpackPlugin.options.title %></h1>
-
-      <section class="section">
+  <body class="home">
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item--left">
+              <a href="/" class="nav__link--logo">Joshua Tree</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 1</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 2</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 3</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 4</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 5</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 6</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 7</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="section-1" class="section--fullscreen">
         <div class="section__wrapper">
           <div class="section__row">
             <div class="section__col">
               <img
-                src="<%=require('./assets/images/folder.svg')%>"
-                alt="folder"
+                src="<%=require('./assets/images/home-hero.jpeg')%>"
+                alt=""
+                class="section__image image--cover hero__image"
               />
             </div>
           </div>
         </div>
       </section>
-    </div>
+      <section id="section-2" class="section--fullscreen">
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col--800"></div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

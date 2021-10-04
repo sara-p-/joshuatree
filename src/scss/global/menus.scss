@@ -2,42 +2,24 @@
 @use './mixins.scss' as *;
 
 .nav {
-  &__item {
-    display: inline-block;
-    padding: 3px 10px;
-  }
-}
-
-.submenu {
-  $self: &;
-  position: relative;
   &__items {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    @include flex;
   }
   &__item {
-    width: 300px;
-    background: lighten($light-grey, 10%);
-  }
-  &--active {
-    @extend .submenu;
-    background: $blue;
-    .submenu__button {
-      color: $white;
-    }
-    #{$self}__items {
-      display: block;
-    }
-    #{$self}__item:hover {
-      background: lighten($blue, 30%);
+    &--left {
+      margin-right: auto;
     }
   }
-}
-
-.item {
-  &--border-bottom {
-    border-bottom: 1px solid lighten($grey, 10%);
+  &__link {
+    font-size: 18px;
+    color: $white;
+    padding: 5px;
+    margin: 10px;
+    &--logo {
+      @extend .nav__link;
+      font-size: 24px;
+      font-family: $heading-font-family;
+      font-weight: 700;
+    }
   }
 }

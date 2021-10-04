@@ -1,4 +1,4 @@
-@use "./variables.scss" as *;
+@use './variables.scss' as *;
 
 // Breakpoints
 @mixin mobile-only {
@@ -33,15 +33,13 @@
   font-family: $font-family;
   font-weight: $font-weight;
   line-height: $heading-line-height;
-  text-transform: uppercase;
   margin: 0 0 30px 0;
 }
 
 // Utility
 @mixin link-style() {
   font-family: $base-font-family;
-  letter-spacing: 0.155em;
-  text-transform: uppercase;
+  // letter-spacing: 0.155em;
 }
 
 @mixin image-cover() {
@@ -122,7 +120,7 @@
   font-weight: 500;
   line-height: 1;
   text-decoration: underline;
-  color: $off-white;
+  color: $brown;
   background-color: transparent;
   border: $base-border;
   border-radius: $btn-border-radius;
@@ -156,7 +154,8 @@
   outline-offset: $focus-outline-offset;
 }
 
-@mixin fullscreen {
+@mixin fullscreen($height: 100%) {
   width: 100%;
-  height: 100%;
+  height: $height;
+  padding: 0;
 }

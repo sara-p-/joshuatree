@@ -1,23 +1,23 @@
 @use 'sass:math';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Poppins:wght@500&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
 // Fonts
-$base-font-family: 'Montserrat', sans-serif;
-$heading-font-family: $base-font-family;
+$base-font-family: 'Sorts Mill Goudy', serif;
+$heading-font-family: 'Corben', cursive;
+$alt-font-family: 'Poppins', sans-serif;
 
 // Font Size
-$base-font-size: 16px;
-$desktop-font-size: 16px;
-$tablet-font-size: 16px;
+$base-font-size: 24px;
+$desktop-font-size: 24px;
+$tablet-font-size: 24px;
 $mobile-font-size: 14px;
 
 // Line Height
-$base-line-height: 26px;
+$base-line-height: 34.5px;
 $heading-line-height: 1;
 
 // Font Weight
 $base-font-weight: 400;
-$heading-font-weight: 900;
+$heading-font-weight: $base-font-weight;
 
 // Site Width
 $site-width-large: 1400px;
@@ -37,11 +37,14 @@ $spacing-200: 200px;
 // Colors
 $black: #363636;
 $white: #ffffff;
-$off-white: #f3f3f3;
-$light-grey: #d4d4d4;
-$grey: #797979;
-$light-purple: #eacbef;
-$light-pink: #ffa4a4;
+$brown: #906e56;
+$mauve: #bd9a8b;
+$dark-brown: #311c07;
+$umber: #a4734c;
+$pink: #e2b1ad;
+$dark-green: #e2b1ad;
+$text-pink: #8f615d;
+$olive: #776847;
 $red: #e74c3c;
 $blue: blue;
 
@@ -49,21 +52,21 @@ $links: $black;
 $hover: $black;
 
 // Font Colors
-$base-font-color: $black;
-$action-color: $black;
-$error-color: $black;
+$base-font-color: $text-pink;
+$action-color: $text-pink;
+$error-color: $text-pink;
 
-$base-font-color: $black;
-$color-selection: $light-grey;
+$base-font-color: $text-pink;
+$color-selection: $mauve;
 
 // Buttons
 $btn-bg-color: transparent;
-$btn-text-color: $black;
+$btn-text-color: $text-pink;
 $btn-text-color-hover: $white;
 $btn-border-radius: 0;
 
 // Border
-$base-border-color: $black;
+$base-border-color: $text-pink;
 $base-border: 2px solid $base-border-color;
 
 // Background Colors

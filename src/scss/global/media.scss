@@ -4,13 +4,15 @@
 img {
   width: 100%;
   height: auto;
-}
 
-.image {
-  &__contain {
-    object-fit: contain;
-  }
-  &__cover {
-    object-fit: cover;
+  &.image {
+    &--contain {
+      height: 100%;
+      object-fit: contain;
+    }
+    &--cover {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
