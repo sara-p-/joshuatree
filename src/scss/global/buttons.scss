@@ -5,3 +5,7 @@ button {
   @include clear-btn;
   cursor: pointer;
 }
+
+.button {
+  @include btn-base;
+}

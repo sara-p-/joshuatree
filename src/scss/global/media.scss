@@ -16,3 +16,14 @@ img {
     }
   }
 }
+
+.background {
+  @include image-cover;
+  &--fullscreen {
+    @extend .background;
+  }
+  &--fixed {
+    @extend .background;
+    background-attachment: fixed;
+  }
+}

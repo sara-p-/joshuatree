@@ -39,8 +39,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
+      title: 'Home',
+      filename: 'index.html',
       template: path.resolve(__dirname, '..', './src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Day 2',
+      filename: 'day-two.html',
+      template: path.resolve(__dirname, '..', './src/day-two.html'),
     }),
   ],
   resolve: {

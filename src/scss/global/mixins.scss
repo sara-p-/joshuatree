@@ -6,23 +6,23 @@
     @content;
   }
 }
-@mixin tablet-portrait {
-  @media (max-width: 600px) {
+@mixin tablet-portrait-up {
+  @media (min-width: 600px) {
     @content;
   }
 }
-@mixin tablet {
-  @media (max-width: 900px) {
+@mixin tablet-up {
+  @media (min-width: 900px) {
     @content;
   }
 }
-@mixin desktop {
-  @media (max-width: 1200px) {
+@mixin desktop-up {
+  @media (min-width: 1200px) {
     @content;
   }
 }
-@mixin big-desktop {
-  @media (max-width: 1800px) {
+@mixin big-desktop-up {
+  @media (min-width: 1800px) {
     @content;
   }
 }
@@ -33,7 +33,7 @@
   font-family: $font-family;
   font-weight: $font-weight;
   line-height: $heading-line-height;
-  margin: 0 0 30px 0;
+  margin: 0 0 $spacing-32 0;
 }
 
 // Utility
@@ -94,6 +94,7 @@
   justify-content: $justify;
   align-items: $align;
   flex-wrap: $wrap;
+  flex-direction: $dir;
 }
 
 @mixin display-value($var) {
@@ -114,13 +115,13 @@
   padding: 17px 8px 15px;
   min-width: 150px;
   text-align: center;
-  font-family: $base-font-family;
-  font-size: 14px;
+  font-family: $alt-font-family;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
   line-height: 1;
-  text-decoration: underline;
-  color: $brown;
+  text-decoration: none;
+  color: $text-pink;
   background-color: transparent;
   border: $base-border;
   border-radius: $btn-border-radius;
@@ -154,8 +155,8 @@
   outline-offset: $focus-outline-offset;
 }
 
-@mixin fullscreen($height: 100%) {
+@mixin fullscreen($height: 100%, $min-height: 100%) {
   width: 100%;
   height: $height;
-  padding: 0;
+  min-height: $min-height;
 }

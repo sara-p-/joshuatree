@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Joshua Tree Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="home">
+  <body>
     <header class="header">
       <div class="header__wrapper">
         <nav class="nav">
@@ -37,15 +38,60 @@
       </div>
     </header>
     <main>
-      <section id="section-1" class="section--fullscreen">
+      <section
+        id="section-1"
+        class="section--fullscreen section--fixed background--fullscreen"
+        style="
+          background-image: url(<%=require('./assets/images/home-hero.jpg')%>);
+        "
+      >
+        <img
+          class="visually-hidden"
+          src="<%=require('./assets/images/home-hero.jpg')%>"
+          alt=""
+        />
         <div class="section__wrapper">
           <div class="section__row">
-            <div class="section__col">
-              <img
-                src="<%=require('./assets/images/home-hero.jpeg')%>"
-                alt=""
-                class="section__image image--cover hero__image"
-              />
+            <div class="section__col--800">
+              <div class="section__content">
+                <ul class="section__items colors__items flex--space-between">
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--brown"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--mauve"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--dark-brown"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--umber"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--pink"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--dark-green"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                  <li class="section__item colors__item">
+                    <a href="" class="colors__link colors--olive"
+                      ><span class="visually-hidden">Day One</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -53,7 +99,20 @@
       <section id="section-2" class="section--fullscreen">
         <div class="section__wrapper">
           <div class="section__row">
-            <div class="section__col--800"></div>
+            <div class="section__col--800">
+              <div class="section__content">
+                <h1>Joshua Tree</h1>
+                <h2 class="h5">September 27th - October 5th, 2021</h2>
+                <p>
+                  This is a "digital scrapbook" of a trip that my partner and I
+                  took in the early fall of 2021.
+                </p>
+                <p>This site is laid out in order, from Day 1 to Day 7.</p>
+                <div class="section__buttons">
+                  <a href="" class="button">Start</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

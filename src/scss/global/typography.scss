@@ -8,59 +8,59 @@ p span {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
-  font-size: $base-font-size;
+  font-size: $mobile-font-size;
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
-  @include tablet {
-    font-size: $mobile-font-size;
+  @include tablet-up {
+    font-size: $base-font-size;
   }
 }
 
 p {
-  margin: 0 0 20px 0;
+  margin: 0 0 $spacing-16 0;
 }
 
 h1,
 .h1 {
-  @include heading-style(72px, $heading-font-family, 700);
-  @include tablet {
-    font-size: 36px;
+  @include heading-style(36px, $heading-font-family, 700);
+  @include tablet-up {
+    font-size: 72px;
   }
 }
 
 h2,
 .h2 {
-  @include heading-style(64px, $heading-font-family, 400);
+  @include heading-style(34px, $heading-font-family, 700);
   // letter-spacing: 0.02px;
-  @include tablet {
-    font-size: 34px;
+  @include tablet-up {
+    font-size: 64px;
   }
 }
 
 h3,
 .h3 {
-  @include heading-style(48px, $alt-font-family, 500);
-  @include tablet {
-    font-size: 24px;
+  @include heading-style(24px, $alt-font-family, 500);
+  @include tablet-up {
+    font-size: 48px;
   }
 }
 
 h4,
 .h4 {
-  @include heading-style(36px, $base-font-family, 400);
+  @include heading-style(18px, $base-font-family, 400);
   font-style: italic;
-  @include tablet {
-    font-size: 18px;
+  @include tablet-up {
+    font-size: 36px;
   }
 }
 
 h5,
 .h5 {
-  @include heading-style(32px, $alt-font-family, 500);
+  @include heading-style(16px, $alt-font-family, 500);
   text-transform: none;
-  line-height: 32px;
-  @include tablet {
-    font-size: 16px;
+  // line-height: 32px;
+  @include tablet-up {
+    font-size: 32px;
   }
 }
 
@@ -109,4 +109,17 @@ blockquote {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+// Text Alignment
+.text-align {
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--left {
+    text-align: left;
+  }
 }

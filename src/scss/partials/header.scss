@@ -6,12 +6,21 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: $text-pink;
+  background: $white;
+  border-bottom: $base-border;
   ul {
     @include clear-list;
   }
   button {
     @include clear-btn;
     cursor: pointer;
+  }
+  .nav {
+    &__link {
+      color: $text-pink;
+      &--logo {
+        @extend .nav__link;
+      }
+    }
   }
 }
