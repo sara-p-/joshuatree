@@ -17,12 +17,19 @@ html,
 body {
   background-color: $viewport-background-color;
   height: 100%;
+  width: 100%;
 }
 
 body {
   margin: 0;
   height: 100%;
-  overflow-x: hidden;
+  // overflow: hidden;
+}
+
+.page__wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 main {
@@ -30,22 +37,13 @@ main {
   height: 100%;
 }
 
-.header {
-  &__wrapper {
-    max-width: $site-width-1400;
-    margin: auto;
-    padding: 0 $spacing-24;
-  }
-}
-
 .section {
-  $self: &;
   position: relative;
   margin-bottom: $spacing-120;
-  // overflow: hidden;
+  width: 100%;
   &--fullscreen {
-    margin-bottom: 0;
-    @include fullscreen($min-height: 100vh);
+    @extend .section;
+    @include fullscreen($height: 100vh);
     .section {
       &__wrapper {
         @include fullscreen;
@@ -55,9 +53,6 @@ main {
         padding: 0;
       }
     }
-    &:not(:first-of-type) {
-      margin-top: -$spacing-120;
-    }
   }
   &--fixed {
     position: fixed;
@@ -66,12 +61,14 @@ main {
     z-index: -1;
   }
   &__wrapper {
-    @extend .header__wrapper;
+    max-width: $site-width-1400;
+    margin: auto;
+    padding: 0 $spacing-24;
   }
   &__row {
     @include flex;
     position: relative;
-    padding: $spacing-120 0;
+    // padding: $spacing-120 0;
   }
   &__col {
     flex: 1;
@@ -88,9 +85,18 @@ main {
   &__content {
     width: 100%;
     max-width: 600px;
-    &--wide {
+    background: $white;
+    &--800 {
       @extend .section__content;
       max-width: 800px;
+    }
+    &--900 {
+      @extend .section__content;
+      max-width: 900px;
+    }
+    &--1000 {
+      @extend .section__content;
+      max-width: 1000px;
     }
   }
   &__title {
@@ -112,13 +118,22 @@ main {
   &__caption {
     position: absolute;
     bottom: -25px;
-    left: -12%;
     margin-bottom: 0;
     background: $white;
-    padding: $spacing-8 $spacing-16 $spacing-8 24%;
     border-top: $base-border;
-    border-right: $base-border;
     border-bottom: $base-border;
+    &--left {
+      border-right: $base-border;
+      @extend .section__caption;
+      left: -40%;
+      padding: $spacing-8 $spacing-16 $spacing-8 50%;
+    }
+    &--right {
+      @extend .section__caption;
+      border-left: $base-border;
+      right: -30%;
+      padding: $spacing-8 45% $spacing-8 $spacing-16;
+    }
   }
   &__items {
     @include clear-list;
@@ -126,6 +141,16 @@ main {
 
   &__buttons {
     padding-top: $spacing-32;
+  }
+}
+
+// Row/content Settings
+.content {
+  flex-direction: row;
+  &--left {
+    @include tablet-portrait-up {
+      flex-direction: row-reverse;
+    }
   }
 }
 
@@ -184,50 +209,6 @@ main {
   }
 }
 
-// Color and Color Bar Settings
-.colors {
-  &__item {
-    width: 100%;
-    margin-bottom: 30px;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    @include tablet-portrait-up {
-      width: auto;
-      margin-bottom: 0;
-    }
-  }
-  &__link {
-    height: 30px;
-    width: 100%;
-    @include tablet-portrait-up {
-      height: 200px;
-      width: 75px;
-    }
-  }
-  &--brown {
-    background-color: $brown;
-  }
-  &--mauve {
-    background-color: $mauve;
-  }
-  &--dark-brown {
-    background-color: $dark-brown;
-  }
-  &--umber {
-    background-color: $umber;
-  }
-  &--pink {
-    background-color: $pink;
-  }
-  &--dark-green {
-    background-color: $dark-green;
-  }
-  &--olive {
-    background-color: $olive;
-  }
-}
-
 // Border Settings
 .border {
   &--all {
@@ -249,6 +230,17 @@ main {
     border-width: 24px;
     padding-left: 24px;
   }
+  &--middle {
+    &:before {
+      content: '';
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom: $base-border;
+    }
+  }
 }
 
 // Underline Settings
@@ -265,6 +257,56 @@ main {
       @extend .underline;
       left: 0;
     }
+  }
+  &--left {
+    &:after {
+      @extend .underline;
+      right: 0;
+    }
+  }
+}
+
+// Padding and Margin Settings
+.padding {
+  @each $position in $positions {
+    &--#{$position} {
+      @each $space in $spacing {
+        &--#{$space} {
+          padding-#{$position}: $space;
+        }
+      }
+    }
+  }
+  &--all {
+    @each $space in $spacing {
+      &--#{$space} {
+        padding: $space $space $space $space;
+      }
+    }
+  }
+  &--none {
+    padding: 0;
+  }
+}
+.margin {
+  @each $position in $positions {
+    &--#{$position} {
+      @each $space in $spacing {
+        &--#{$space} {
+          margin-#{$position}: $space;
+        }
+      }
+    }
+  }
+  &--all {
+    @each $space in $spacing {
+      &--#{$space} {
+        margin: $space $space $space $space;
+      }
+    }
+  }
+  &--none {
+    margin: 0;
   }
 }
 

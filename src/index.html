@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <header class="header">
+    <header class="header--fixed">
       <div class="header__wrapper">
         <nav class="nav">
           <ul class="nav__items">
@@ -40,7 +40,7 @@
     <main>
       <section
         id="section-1"
-        class="section--fullscreen section--fixed background--fullscreen"
+        class="section--fullscreen background--fullscreen background--fixed"
         style="
           background-image: url(<%=require('./assets/images/home-hero.jpg')%>);
         "
@@ -50,7 +50,7 @@
           src="<%=require('./assets/images/home-hero.jpg')%>"
           alt=""
         />
-        <div class="section__wrapper">
+        <!-- <div class="section__wrapper">
           <div class="section__row">
             <div class="section__col--800">
               <div class="section__content">
@@ -94,13 +94,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <section id="section-2" class="section--fullscreen">
         <div class="section__wrapper">
           <div class="section__row">
             <div class="section__col--800">
-              <div class="section__content">
+              <div class="section__content--wide border--left border--thick">
                 <h1>Joshua Tree</h1>
                 <h2 class="h5">September 27th - October 5th, 2021</h2>
                 <p>

@@ -5,160 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body class="day-two">
-    <header class="header">
-      <div class="header__wrapper">
-        <nav class="nav">
-          <ul class="nav__items">
-            <li class="nav__item--left">
-              <a href="/" class="nav__link--logo">Joshua Tree</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 1</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 2</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 3</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 4</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 5</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 6</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Day 7</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section id="section-1" class="section--fullscreen">
-        <div class="section__wrapper">
-          <div class="section__row">
-            <div class="section__col">
-              <div class="section__content--wide border--left border--thick">
-                <h1 class="section__title">Tuesday, September 28th</h1>
-                <h2 class="h3 section__subtitle">
-                  Our first time in a desert. Ever.
-                </h2>
+    <div class="page__wrapper">
+      <header class="header--fixed">
+        <div class="header__wrapper">
+          <nav class="nav">
+            <ul class="nav__items">
+              <li class="nav__item--left">
+                <a href="/" class="nav__link--logo">Joshua Tree</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 1</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 2</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 3</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 4</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 5</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 6</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Day 7</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section id="section-1" class="section--fullscreen">
+          <div class="section__wrapper">
+            <div class="section__row">
+              <div class="section__col">
+                <div class="section__content--800 border--left border--thick">
+                  <h1 class="section__title">Tuesday, September 28th</h1>
+                  <h2 class="h3 section__subtitle">
+                    Our first time in a desert. Ever.
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="section-2" class="section border--top border--bottom">
-        <div
-          class="section__image-container--short background--fixed"
-          style="
-            background-image: url(<%=require(
-                './assets/images/day-two-hero.jpeg'
-              )%>);
-          "
-        >
-          <img
-            class="section__image visually-hidden"
-            src="<%=require('./assets/images/day-two-hero.jpeg')%>"
-            alt=""
-          />
-          <figcaption class="section__caption h3">
-            Our little desert house.
-          </figcaption>
-        </div>
-      </section>
-      <section id="section-3" class="section">
-        <div class="section__wrapper">
-          <div class="section__row">
-            <div class="section__col">
-              <div class="section__image-container">
-                <img
-                  class="section__image border--all image--cover"
-                  src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
-                  alt=""
-                />
+        </section>
+        <section id="section-2" class="section border--top border--bottom">
+          <div
+            class="section__image-container--short background--fixed"
+            style="
+              background-image: url(<%=require(
+                  './assets/images/day-two-hero.jpeg'
+                )%>);
+            "
+          >
+            <img
+              class="section__image visually-hidden"
+              src="<%=require('./assets/images/day-two-hero.jpeg')%>"
+              alt=""
+            />
+            <figcaption class="section__caption--right h3">
+              Our little desert house.
+            </figcaption>
+          </div>
+        </section>
+        <section id="section-3" class="section">
+          <div class="section__wrapper">
+            <div class="section__row content--left">
+              <div class="section__col">
+                <div class="section__image-container">
+                  <img
+                    class="section__image border--all image--cover"
+                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
-            <div class="section__col">
-              <div class="section__content">
-                <h1 class="section__title underline--right">
-                  The first morning.
-                </h1>
-                <h2 class="h3">I woke up around 9am.</h2>
-                <p>
-                  We had landed and driven in at night, and had no idea what the
-                  area actually looked like.
-                </p>
-                <p>
-                  When I looked our the window I saw a gorgeous landscape of
-                  desert plants, surrounded on all sides by stunning mountains.
-                </p>
-                <p>
-                  We took our coffee out to the porch, and spent the morning
-                  watching hummingbirds and little lizards dart across the yard.
-                  At one point we saw a roadrunner buzzing around in the
-                  distance. The weather was in the 70’s with a nice breeze.
-                </p>
-                <p>
-                  We decided that we would go into the Park (Joshua Tree
-                  National Park) to watch the sunset, and we picked the Skull
-                  Rock Nature Trail as our destination.
-                </p>
+              <div class="section__col">
+                <div class="section__content">
+                  <h1 class="section__title underline--left">
+                    The first morning.
+                  </h1>
+                  <h2 class="h3">I woke up around 9am.</h2>
+                  <p>
+                    We had landed and driven in at night, and had no idea what
+                    the area actually looked like.
+                  </p>
+                  <p>
+                    When I looked our the window I saw a gorgeous landscape of
+                    desert plants, surrounded on all sides by stunning
+                    mountains.
+                  </p>
+                  <p>
+                    We took our coffee out to the porch, and spent the morning
+                    watching hummingbirds and little lizards dart across the
+                    yard. At one point we saw a roadrunner buzzing around in the
+                    distance. The weather was in the 70’s with a nice breeze.
+                  </p>
+                  <p>
+                    We decided that we would go into the Park (Joshua Tree
+                    National Park) to watch the sunset, and we picked the Skull
+                    Rock Nature Trail as our destination.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="section-4" class="section border--top border--bottom">
-        <div
-          class="section__image-container--short background--fixed"
-          style="
-            background-image: url(<%=require(
-                './assets/images/day-two-brandon-in-bed.jpg'
-              )%>);
-          "
-        >
-          <img
-            class="section__image visually-hidden"
-            src="<%=require('./assets/images/day-two-brandon-in-bed.jpg')%>"
-            alt=""
-          />
-          <figcaption class="section__caption h3">Bae in bed.</figcaption>
-        </div>
-      </section>
-      <section id="section-5" class="section--fullscreen">
-        <div class="section__wrapper">
-          <div class="section__row">
-            <div class="section__col">
-              <div class="section__slider slider border--all">
-                <ul class="section__items slider__items">
-                  <li
-                    class="section__item slider__item background"
-                    style="
-                      background-image: url(<%=require(
-                          './assets/images/day-two-hero.jpeg'
-                        )%>);
-                    "
-                  >
-                    <img
-                      src=""
-                      alt=""
-                      class="section__image slider__image visually-hidden"
-                    />
-                    <figcaption class="section__caption h3">
-                      Bae in bed.
-                    </figcaption>
-                  </li>
-                </ul>
+        </section>
+        <section id="section-4" class="section border--top border--bottom">
+          <div
+            class="section__image-container--short background--fixed"
+            style="
+              background-image: url(<%=require(
+                  './assets/images/day-two-brandon-in-bed.jpg'
+                )%>);
+            "
+          >
+            <img
+              class="section__image visually-hidden"
+              src="<%=require('./assets/images/day-two-brandon-in-bed.jpg')%>"
+              alt=""
+            />
+            <figcaption class="section__caption--left h3">
+              Bae in bed.
+            </figcaption>
+          </div>
+        </section>
+        <section id="section-5" class="section">
+          <div class="section__wrapper">
+            <div class="section__row content--right">
+              <div class="section__col">
+                <div class="section__image-container">
+                  <img
+                    class="section__image border--all image--cover"
+                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="section__col">
+                <div class="section__content">
+                  <h1 class="section__title underline--right">
+                    Sunset at Skull Rock
+                  </h1>
+                  <h2 class="h3">Our first drive into the park</h2>
+                  <p>
+                    The drive through the park was wild. Not only was the
+                    geology/flora totally different than anything we’d ever
+                    seen, but it kept radically changing depending on the
+                    altitude.
+                  </p>
+                  <p>
+                    Skull Rock is part of an area covered in massive boulders
+                    and hills, with desert plants growing out of every crevice
+                    and crack.
+                  </p>
+                  <p>
+                    We got out of the car and were shocked at how nice the
+                    temperature was. The trail was a sandy trench that meandered
+                    around the boulders and outcroppings.
+                  </p>
+                  <p>
+                    The trail was easy to follow at first, but then just seemed
+                    to dissolve into the rocks and we ended up just wandering
+                    through the boulders. At one point we climbed up an
+                    outcropping and saw tons of cairns everywhere. I cannot
+                    fully verbalize how enchanted we were by everything in the
+                    landscape. It was magnificent and so entirely different than
+                    anything either of us had seen before. By this point the sun
+                    was setting and the colors of everything around us were
+                    changing too.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <section id="section-6" class="section--fullscreen">
+          <div class="section__wrapper">
+            <div class="section__row">
+              <div class="section__col">
+                <div class="section__slider slider border--all">
+                  <ul class="section__items slider__items">
+                    <li
+                      class="section__item slider__item background"
+                      style="
+                        background-image: url(<%=require(
+                            './assets/images/day-two-hero.jpeg'
+                          )%>);
+                      "
+                    >
+                      <img
+                        src=""
+                        alt=""
+                        class="section__image slider__image visually-hidden"
+                      />
+                      <figcaption class="section__caption--right h3">
+                        Bae in bed.
+                      </figcaption>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-7" class="section">
+          <div class="section__wrapper">
+            <div class="section__row content--left">
+              <div class="section__col">
+                <div class="section__image-container">
+                  <img
+                    class="section__image border--all image--cover"
+                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="section__col">
+                <div class="section__content">
+                  <h1 class="section__title underline--left">Home again</h1>
+                  <h2 class="h3">Mushroom risotto and pan-seared chicken</h2>
+                  <p>
+                    After the sun set, it started getting dark pretty quickly,
+                    and we decided to drive back to our little desert home. We
+                    had the windows down so we could feel the cool breeze, and
+                    our favorite playlist playing. This was the first day of our
+                    trip, and it was already amazing. Our ears popped as we
+                    drove back to our Airbnb, and we realized that the Park was
+                    at a completely different altitude than our Airbnb.
+                  </p>
+                  <p>
+                    When we got back we had a beer on the porch, and then
+                    started cooking dinner. Our Airbnb was surprisingly
+                    well-equipped, and we were able to cook mushroom risotto
+                    with pan-seared chicken. It was an unbelievably long
+                    process, but we were stoned and didn’t really mind. The end
+                    result was fucking delicious, and totally worth it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8" class="section border--middle">
+          <div class="section__wrapper">
+            <div class="section__row">
+              <div class="section__col--flex">
+                <div
+                  class="
+                    section__content--900
+                    padding--all--64px
+                    border--all
+                    text-align--center
+                  "
+                >
+                  <h1 class="margin--none">
+                    We ended the day in the hot tub, and fell asleep around
+                    midnight.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

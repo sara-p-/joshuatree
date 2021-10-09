@@ -1,13 +1,25 @@
 @use '../global/variables.scss' as *;
 @use '../global/mixins.scss' as *;
 
-header {
+.header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background: $white;
   border-bottom: $base-border;
+  z-index: 100;
+  &--fixed {
+    @extend .header;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &__wrapper {
+    max-width: $site-width-1400;
+    margin: auto;
+    padding: 0 $spacing-24;
+  }
   ul {
     @include clear-list;
   }
