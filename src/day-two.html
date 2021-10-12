@@ -39,13 +39,22 @@
         </div>
       </header>
       <main>
+        <!-- Hero -->
         <section id="section-1" class="section--fullscreen">
           <div class="section__wrapper">
             <div class="section__row">
               <div class="section__col">
-                <div class="section__content--800 border--left border--thick">
-                  <h1 class="section__title">Tuesday, September 28th</h1>
-                  <h2 class="h3 section__subtitle">
+                <div
+                  class="
+                    section__content--800
+                    border--left border--thick
+                    overflow--hidden
+                  "
+                >
+                  <h1 class="section__title animate--title">
+                    Tuesday, September 28th
+                  </h1>
+                  <h2 class="h3 section__subtitle animate--title">
                     Our first time in a desert. Ever.
                   </h2>
                 </div>
@@ -53,39 +62,48 @@
             </div>
           </div>
         </section>
+        <!-- Short Fullscreen Image of House -->
         <section id="section-2" class="section border--top border--bottom">
           <div
             class="section__image-container--short background--fixed"
             style="
               background-image: url(<%=require(
-                  './assets/images/day-two-hero.jpeg'
+                  './assets/images/day2-house-outside.jpg'
                 )%>);
             "
           >
             <img
               class="section__image visually-hidden"
-              src="<%=require('./assets/images/day-two-hero.jpeg')%>"
+              src="<%=require('./assets/images/day2-house-outside.jpg')%>"
               alt=""
             />
-            <figcaption class="section__caption--right h3">
+            <figcaption
+              class="section__caption--right h3 animate--slide-from-right"
+            >
               Our little desert house.
             </figcaption>
           </div>
         </section>
+        <!-- The First Morning -->
         <section id="section-3" class="section">
           <div class="section__wrapper">
             <div class="section__row content--left">
               <div class="section__col">
                 <div class="section__image-container">
                   <img
-                    class="section__image border--all image--cover"
-                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    class="
+                      section__image
+                      border--all
+                      image--cover
+                      animate--slide-from-bottom
+                    "
+                    src="<%=require('./assets/images/day2-brandon-outside.jpg')%>"
                     alt=""
                   />
                 </div>
               </div>
               <div class="section__col">
-                <div class="section__content">
+                <div class="section__content animate--slide-from-bottom-slow">
                   <h1 class="section__title underline--left">
                     The first morning.
                   </h1>
@@ -115,33 +133,42 @@
             </div>
           </div>
         </section>
+        <!-- Short Fullscreen Image of Inside -->
         <section id="section-4" class="section border--top border--bottom">
           <div
             class="section__image-container--short background--fixed"
             style="
               background-image: url(<%=require(
-                  './assets/images/day-two-brandon-in-bed.jpg'
+                  './assets/images/day2-house-inside.jpg'
                 )%>);
             "
           >
             <img
               class="section__image visually-hidden"
-              src="<%=require('./assets/images/day-two-brandon-in-bed.jpg')%>"
+              src="<%=require('./assets/images/day2-house-inside.jpg')%>"
               alt=""
             />
-            <figcaption class="section__caption--left h3">
+            <figcaption
+              class="section__caption--left h3 animate--slide-from-left"
+            >
               Bae in bed.
             </figcaption>
           </div>
         </section>
+        <!-- Sunset at Skull Rock -->
         <section id="section-5" class="section">
           <div class="section__wrapper">
             <div class="section__row content--right">
               <div class="section__col">
                 <div class="section__image-container">
                   <img
-                    class="section__image border--all image--cover"
-                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    class="
+                      section__image
+                      border--all
+                      image--cover
+                      animate--slide-from-bottom
+                    "
+                    src="<%=require('./assets/images/day2-skullrock1.jpg')%>"
                     alt=""
                   />
                 </div>
@@ -184,6 +211,7 @@
             </div>
           </div>
         </section>
+        <!-- Scroll Slider -->
         <section id="section-6" class="section--fullscreen">
           <div class="section__wrapper">
             <div class="section__row">
@@ -194,17 +222,19 @@
                       class="section__item slider__item background"
                       style="
                         background-image: url(<%=require(
-                            './assets/images/day-two-hero.jpeg'
+                            './assets/images/day2-skullrock2.jpg'
                           )%>);
                       "
                     >
                       <img
-                        src=""
+                        src="<%=require(
+                            './assets/images/day2-skullrock2.jpg'
+                          )%>"
                         alt=""
                         class="section__image slider__image visually-hidden"
                       />
                       <figcaption class="section__caption--right h3">
-                        Bae in bed.
+                        Caption here.
                       </figcaption>
                     </li>
                   </ul>
@@ -213,14 +243,20 @@
             </div>
           </div>
         </section>
+        <!-- Home Again -->
         <section id="section-7" class="section">
           <div class="section__wrapper">
             <div class="section__row content--left">
               <div class="section__col">
                 <div class="section__image-container">
                   <img
-                    class="section__image border--all image--cover"
-                    src="<%=require('./assets/images/day-two-brandon-outside.jpg')%>"
+                    class="
+                      section__image
+                      border--all
+                      image--cover
+                      animate--slide-from-bottom
+                    "
+                    src="<%=require('./assets/images/day2-skullrock3.jpg')%>"
                     alt=""
                   />
                 </div>
@@ -251,6 +287,7 @@
             </div>
           </div>
         </section>
+        <!-- Giant Text Box -->
         <section id="section-8" class="section border--middle">
           <div class="section__wrapper">
             <div class="section__row">
@@ -269,6 +306,131 @@
                   </h1>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <!-- Growing Image to Fullscreen -->
+        <section id="section-9" class="section--fullscreen">
+          <img
+            src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+            alt=""
+            class="section__image image--cover border--all"
+          />
+        </section>
+        <!-- Masonry Grid -->
+        <section id="section-10" class="section margin--bottom--32px">
+          <div class="section__wrapper">
+            <div class="section__row--grid grid--masonry">
+              <div
+                class="grid__item item1"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-skullrock4.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item2"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-skullrock5.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item3"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-brandon-skullrock.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item4"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-couple1.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-couple1.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item5"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-skullrock5.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item6"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-brandon-skullrock2.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock2.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+              <div
+                class="grid__item item7"
+                style="
+                  background-image: url(<%=require(
+                      './assets/images/day2-brandon-skullrock3.jpg'
+                    )%>);
+                "
+              >
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock3.jpg')%>"
+                  alt=""
+                  class="visually-hidden"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- FullScreen Image -->
+        <section id="section-11" class="section--fullscreen">
+          <div class="section__wrapper">
+            <div class="section__row border--all">
+              <img
+                class="section__image image--cover"
+                src="<%=require('./assets/images/day2-couple2.jpg')%>"
+                alt=""
+              />
             </div>
           </div>
         </section>

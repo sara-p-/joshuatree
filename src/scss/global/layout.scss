@@ -69,6 +69,9 @@ main {
     @include flex;
     position: relative;
     // padding: $spacing-120 0;
+    // &--grid {
+    //   display: grid;
+    // }
   }
   &__col {
     flex: 1;
@@ -184,14 +187,51 @@ main {
 
 // Grid settings
 .grid {
-  @for $i from 1 through 5 {
-    &--#{$grid-space * $i} {
-      grid-template-columns: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-      grid-template-rows: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-    }
+  display: block;
+  gap: $spacing-32;
+  width: 100%;
+  @include tablet-up {
+    display: grid;
   }
-  &--column {
-    grid-auto-flow: column;
+  &--masonry {
+    @extend .grid;
+    // height: 1550px;
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, minmax(100px, auto));
+  }
+  &__item {
+    @include fullscreen;
+    @include fullbackground;
+    border: $base-border;
+  }
+  .item1 {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 3;
+  }
+  .item2 {
+    grid-column: 8 / span 5;
+    grid-row: 1 / span 6;
+  }
+  .item3 {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 3;
+  }
+  .item4 {
+    grid-column: 5 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .item5 {
+    grid-column: 1 / span 6;
+    grid-row: 7 / span 6;
+  }
+  .item6 {
+    grid-column: 7 / span 6;
+    grid-row: 7 / span 3;
+  }
+  .item7 {
+    grid-column: 7 / span 6;
+    grid-row: 10 / span 3;
   }
 }
 
@@ -307,6 +347,13 @@ main {
   }
   &--none {
     margin: 0;
+  }
+}
+
+// Overflow Settings
+.overflow {
+  &--hidden {
+    overflow: hidden;
   }
 }
 

@@ -160,3 +160,9 @@
   height: $height;
   min-height: $min-height;
 }
+
+@mixin fullbackground {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

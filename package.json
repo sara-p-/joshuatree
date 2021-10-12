@@ -36,6 +36,7 @@
     ]
   },
   "dependencies": {
-    "fibers": "^5.0.0"
+    "fibers": "^5.0.0",
+    "gsap": "^3.8.0"
   }
 }
