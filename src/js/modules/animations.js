@@ -1,4 +1,4 @@
-import { getTheOffset, elementSlide } from './helper-functions'
+import { getTheOffset, elementSlide, slideFromSide } from './helper-functions'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -9,7 +9,6 @@ export default function animations() {
   // HTML
   const allSections = document.querySelectorAll('.section')
   const theSectionArray = Array.from(allSections)
-  const fadeIn = document.querySelectorAll('.animate--fade-in')
 
   // ****************** Section 1 Animations ******************** //
   const section1 = document.querySelector('#section-1')
@@ -21,19 +20,17 @@ export default function animations() {
     delay: 0.3,
   })
 
-  // ****************** Sliding Animations ******************** //
+  // ****************** Animations ******************** //
   theSectionArray.shift()
-  theSectionArray.forEach((section) => {
+  allSections.forEach((section) => {
     const slideFromBottom = section.querySelectorAll(
       '.animate--slide-from-bottom'
-    )
-    const slideFromBottomSlow = section.querySelectorAll(
-      '.animate--slide-from-bottom-slow'
     )
     const slideFromLeft = section.querySelectorAll('.animate--slide-from-left')
     const slideFromRight = section.querySelectorAll(
       '.animate--slide-from-right'
     )
+    const growFullscreen = section.querySelectorAll('.animate--grow-fullscreen')
 
     // Slide from Bottom
     slideFromBottom.forEach((element) => {
@@ -42,30 +39,48 @@ export default function animations() {
         .timeline({
           scrollTrigger: {
             trigger: section,
-            pin: true,
-            start: 'top 120px',
-            end: '+=300',
-            // scrub: 1,
+            // pin: true,
+            start: 'top top',
+            // end: '+=100%',
+            // scrub: true,
           },
         })
         .from(element, {
-          opacity: 0,
+          // opacity: 0,
           y: theOffset,
           duration: 1,
         })
+      // .to(element, {
+      //   y: '-' + theOffset,
+      //   duration: 0.5,
+      // })
     })
 
     // Slide from left
     slideFromLeft.forEach((element) => {
+      slideFromSide(section, element, '-100%', 0)
+    })
+
+    // Slide from right
+    slideFromRight.forEach((element) => {
+      slideFromSide(section, element, '100%', 0)
+    })
+
+    // Grow to fullscreen
+    growFullscreen.forEach((element) => {
       gsap
         .timeline({
           scrollTrigger: {
             trigger: section,
-            start: 'top 40%',
+            start: 'top top',
+            end: '+=100%',
+            pin: true,
+            scrub: true,
           },
         })
         .from(element, {
-          x: '-100%',
+          scale: 0.3,
+          duration: 2,
         })
     })
   })

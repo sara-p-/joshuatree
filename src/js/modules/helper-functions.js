@@ -18,7 +18,30 @@ export function getTheOffset(section, element, slideFrom = 'bottom') {
   }
 }
 
-// Function to create the Sliding animations
+// Function to control the sliding of elements
+export function slideFromSide(
+  section,
+  element,
+  x,
+  y,
+  start = 'top top',
+  duration = 1
+) {
+  const timeline = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: start,
+      },
+    })
+    .from(element, {
+      x: x,
+      y: y,
+      duration: duration,
+    })
+}
+
+// Function to create the Sliding animations (not the scrolling slider though, that's below this)
 export function elementSlide(
   slideFrom,
   section,
@@ -64,4 +87,27 @@ export function elementSlide(
       duration: duration,
       opacity: 0,
     })
+}
+
+// Function to create the Scrolling Slider
+export function scrollSliderTimeline(section) {
+  const sliderAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      pin: true,
+      // start: '',
+      scrub: 1,
+    },
+  })
+
+  return sliderAnimation
+}
+
+// Function to control the individual scroll slides
+export function scrollSliderItems(item) {
+  const itemSlide = gsap.from(item, {
+    y: '100%',
+    duration: 1,
+  })
+  return itemSlide
 }

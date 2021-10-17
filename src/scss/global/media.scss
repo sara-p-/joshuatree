@@ -17,13 +17,48 @@ img {
   }
 }
 
+// Background Settings
 .background {
-  @include image-cover;
-  &--fullscreen {
+  $self: &;
+  @include fullscreen;
+  position: relative;
+  &--alternate {
     @extend .background;
+    #{$self}__image {
+      @include fullscreen;
+      object-fit: cover;
+    }
   }
-  &--fixed {
+  &--border {
     @extend .background;
-    background-attachment: fixed;
+    padding: $spacing-16;
+    @include tablet-portrait-up {
+      padding: $spacing-64;
+    }
+    #{$self}__image {
+      border: $base-border;
+    }
+  }
+  &__image {
+    @include fullscreen;
+    @include image-cover;
+    position: relative;
+  }
+  &__caption {
+    position: absolute;
+    bottom: -5px;
+    margin-bottom: 0;
+    background: $white;
+    border: $base-border;
+    &--left {
+      @extend .background__caption;
+      padding: $spacing-8 $spacing-16 $spacing-8 $spacing-48;
+      left: -5px;
+    }
+    &--right {
+      @extend .background__caption;
+      padding: $spacing-8 $spacing-48 $spacing-8 $spacing-16;
+      right: -5px;
+    }
   }
 }

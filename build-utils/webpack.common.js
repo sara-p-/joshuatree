@@ -48,6 +48,11 @@ module.exports = {
       filename: 'day-two.html',
       template: path.resolve(__dirname, '..', './src/day-two.html'),
     }),
+    new HtmlWebpackPlugin({
+      title: 'Test',
+      filename: 'test.html',
+      template: path.resolve(__dirname, '..', './src/test.html'),
+    }),
   ],
   resolve: {
     extensions: ['*', '.js'],

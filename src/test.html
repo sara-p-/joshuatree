@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joshua Tree Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="day-two">
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item--left">
+              <a href="/" class="nav__link--logo">Joshua Tree</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 1</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 2</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 3</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 4</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 5</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 6</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Day 7</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Hero -->
+      <section id="section-1" class="section section--fullscreen">
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col">
+              <div
+                class="
+                  section__content--800
+                  border--left border--thick
+                  overflow--hidden
+                "
+              >
+                <h1 class="section__title animate--title">
+                  Tuesday, September 28th
+                </h1>
+                <h2 class="h3 section__subtitle animate--title">
+                  Our first time in a desert. Ever.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fullscreen Image of House -->
+      <section
+        id="section-2"
+        class="section section--fullscreen border--top border--bottom"
+      >
+        <div class="background">
+          <div
+            class="background__image image--cover"
+            style="
+              background-image: url(<%=require(
+                  './assets/images/day2-house-outside.jpg'
+                )%>);
+            "
+          >
+            <img
+              class="visually-hidden"
+              src="<%=require('./assets/images/day2-house-outside.jpg')%>"
+              alt=""
+            />
+            <figcaption
+              class="background__caption--right h3 animate--slide-from-right"
+            >
+              Our little desert house.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fullscreen Image of Inside -->
+      <section
+        id="section-4"
+        class="section section--fullscreen border--top border--bottom"
+      >
+        <div class="background">
+          <img
+            class="background__image image--cover"
+            src="<%=require('./assets/images/day2-house-inside.jpg')%>"
+            alt=""
+          />
+          <figcaption
+            class="background__caption--left h3 animate--slide-from-left"
+          >
+            Bae in bed.
+          </figcaption>
+        </div>
+      </section>
+
+      <!-- Scroll Slider -->
+      <section id="section-6" class="section--fullscreen section__slider">
+        <!-- <div class="slider">
+          <ul class="slider__items">
+            <li class="slider__item"></li>
+          </ul>
+        </div> -->
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col">
+              <div class="slider border--all">
+                <ul class="section__items slider__items">
+                  <li
+                    class="section__item slider__item background"
+                    style="
+                      background-image: url(<%=require(
+                          './assets/images/day2-skullrock2.jpg'
+                        )%>);
+                    "
+                  >
+                    <img
+                      src="<%=require(
+                            './assets/images/day2-skullrock2.jpg'
+                          )%>"
+                      alt=""
+                      class="section__image slider__image visually-hidden"
+                    />
+                    <figcaption class="section__caption--right h3">
+                      Caption here.
+                    </figcaption>
+                  </li>
+                  <li
+                    class="section__item slider__item background"
+                    style="
+                      background-image: url(<%=require(
+                          './assets/images/day2-skullrock3.jpg'
+                        )%>);
+                    "
+                  >
+                    <img
+                      src="<%=require(
+                            './assets/images/day2-skullrock3.jpg'
+                          )%>"
+                      alt=""
+                      class="section__image slider__image visually-hidden"
+                    />
+                    <figcaption class="section__caption--right h3">
+                      Different caption here.
+                    </figcaption>
+                  </li>
+                  <li
+                    class="section__item slider__item background"
+                    style="
+                      background-image: url(<%=require(
+                          './assets/images/day2-skullrock4.jpg'
+                        )%>);
+                    "
+                  >
+                    <img
+                      src="<%=require(
+                            './assets/images/day2-skullrock4.jpg'
+                          )%>"
+                      alt=""
+                      class="section__image slider__image visually-hidden"
+                    />
+                    <figcaption class="section__caption--right h3">
+                      3rd caption here.
+                    </figcaption>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Growing Image to Fullscreen -->
+      <!-- <section id="section-9" class="section section--fullscreen">
+        <div class="background animate--grow-fullscreen">
+          <img
+            src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+            alt=""
+            class="background__image image--cover"
+          />
+        </div>
+      </section> -->
+      <!-- Growing Image to Fullscreen -->
+      <!-- <section class="section section--fullscreen">
+        <div class="background animate--grow-fullscreen">
+          <img
+            src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+            alt=""
+            class="background__image image--cover"
+          />
+        </div>
+      </section> -->
+
+      <!-- FullScreen Image -->
+      <section id="section-11" class="section">
+        <div class="section__wrapper">
+          <div class="section__row border--all">
+            <img
+              class="section__image image--cover"
+              src="<%=require('./assets/images/day2-couple2.jpg')%>"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

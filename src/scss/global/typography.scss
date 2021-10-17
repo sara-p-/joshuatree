@@ -43,6 +43,10 @@ h3,
   @include tablet-up {
     font-size: 48px;
   }
+  &--caption {
+    @extend .h3;
+    font-size: 24px;
+  }
 }
 
 h4,
@@ -121,5 +125,28 @@ blockquote {
   }
   &--left {
     text-align: left;
+  }
+}
+
+// Underline Settings
+.underline {
+  &:after {
+    content: '';
+    border-bottom: $base-border;
+    width: calc(200%);
+    position: absolute;
+    bottom: -20px;
+  }
+  &--right {
+    &:after {
+      @extend .underline;
+      left: 0;
+    }
+  }
+  &--left {
+    &:after {
+      @extend .underline;
+      right: 0;
+    }
   }
 }
