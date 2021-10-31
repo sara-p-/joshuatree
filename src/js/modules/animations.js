@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function animations() {
+export function animations() {
   // ****************** Variables ******************** //
   // HTML
   const allSections = document.querySelectorAll('.section')
@@ -20,7 +20,7 @@ export default function animations() {
     delay: 0.3,
   })
 
-  // ****************** Animations ******************** //
+  // ****************** General Animations ******************** //
   theSectionArray.shift()
   allSections.forEach((section) => {
     const slideFromBottom = section.querySelectorAll(
@@ -84,4 +84,30 @@ export default function animations() {
         })
     })
   })
+}
+
+// ****************** Lightbox Animations ******************** //
+export function slideToCenter(item, duration = 0.3) {
+  const t1 = gsap.timeline()
+  t1.to(item, {
+    x: 0,
+    duration: duration,
+  })
+  return t1
+}
+export function slideToLeft(item, duration = 0.3) {
+  const t1 = gsap.timeline()
+  t1.to(item, {
+    x: '-100%',
+    duration: duration,
+  })
+  return t1
+}
+export function slideToRight(item, duration = 0.3) {
+  const t1 = gsap.timeline()
+  t1.to(item, {
+    x: '100%',
+    duration: duration,
+  })
+  return t1
 }

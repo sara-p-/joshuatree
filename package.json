@@ -38,6 +38,7 @@
   "dependencies": {
     "fibers": "^5.0.0",
     "fullpage.js": "^3.1.2",
-    "gsap": "^3.8.0"
+    "gsap": "^3.8.0",
+    "micromodal": "^0.4.6"
   }
 }

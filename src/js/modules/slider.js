@@ -15,7 +15,7 @@ export default function scrollSlider() {
         pin: true,
         // pinSpacing: 'margin',
         start: 'top top',
-        // end: '+=100%',
+        end: '+=100%',
         scrub: true,
       },
     })

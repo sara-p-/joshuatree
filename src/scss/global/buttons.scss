@@ -9,3 +9,22 @@ button {
 .button {
   @include btn-base;
 }
+
+.image__link {
+  width: 100%;
+  height: 100%;
+}
+
+.icon__button {
+  font-size: 48px;
+  line-height: 1;
+  padding: $spacing-8 13px;
+  border: $base-border;
+  background: $white;
+  &:hover,
+  &:focus {
+    background: $text-pink;
+    color: $white;
+    // border: $white;
+  }
+}

@@ -3,6 +3,10 @@
   <head>
     <title>Joshua Tree Trip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d2d9bdc7cf.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="day-two">
     <header class="header">
@@ -67,16 +71,9 @@
         class="section section--fullscreen border--top border--bottom"
       >
         <div class="background">
-          <div
-            class="background__image"
-            style="
-              background-image: url(<%=require(
-                  './assets/images/day2-house-outside.jpg'
-                )%>);
-            "
-          >
+          <button class="image__link" data-status="" type="button">
             <img
-              class="visually-hidden"
+              class="image--cover"
               src="<%=require('./assets/images/day2-house-outside.jpg')%>"
               alt=""
             />
@@ -85,7 +82,7 @@
             >
               Our little desert house.
             </figcaption>
-          </div>
+          </button>
         </div>
       </section>
       <!-- The First Morning -->
@@ -94,11 +91,13 @@
           <div class="section__row content--left">
             <div class="section__col">
               <div class="section__image-container animate--slide-from-bottom">
-                <img
-                  class="section__image border--all image--cover"
-                  src="<%=require('./assets/images/day2-brandon-outside.jpg')%>"
-                  alt=""
-                />
+                <button class="image__link" data-status="" type="button">
+                  <img
+                    class="section__image border--all image--cover"
+                    src="<%=require('./assets/images/day2-brandon-outside.jpg')%>"
+                    alt=""
+                  />
+                </button>
               </div>
             </div>
             <div class="section__col">
@@ -137,16 +136,9 @@
         class="section section--fullscreen border--top border--bottom"
       >
         <div class="background">
-          <div
-            class="background__image"
-            style="
-              background-image: url(<%=require(
-                  './assets/images/day2-house-inside.jpg'
-                )%>);
-            "
-          >
+          <button class="image__link" data-status="" type="button">
             <img
-              class="visually-hidden"
+              class="image--cover"
               src="<%=require('./assets/images/day2-house-inside.jpg')%>"
               alt=""
             />
@@ -155,7 +147,7 @@
             >
               Bae in bed.
             </figcaption>
-          </div>
+          </button>
         </div>
       </section>
       <!-- Sunset at Skull Rock -->
@@ -164,11 +156,13 @@
           <div class="section__row content--right">
             <div class="section__col">
               <div class="section__image-container animate--slide-from-bottom">
-                <img
-                  class="section__image border--all image--cover"
-                  src="<%=require('./assets/images/day2-skullrock1.jpg')%>"
-                  alt=""
-                />
+                <button class="image__link" data-status="" type="button">
+                  <img
+                    class="section__image border--all image--cover"
+                    src="<%=require('./assets/images/day2-skullrock1.jpg')%>"
+                    alt=""
+                  />
+                </button>
               </div>
             </div>
             <div class="section__col">
@@ -207,95 +201,126 @@
           </div>
         </div>
       </section>
-      <!-- Scroll Slider -->
+      <!-- Fullscreen Image of Inside -->
       <section
-        id="section-6"
-        class="section section--fullscreen section__slider"
+        id="section-4"
+        class="section section--fullscreen border--top border--bottom"
       >
+        <div class="background">
+          <button class="image__link" data-status="" type="button">
+            <img
+              class="visually-hidden"
+              src="<%=require('./assets/images/day2-house-inside.jpg')%>"
+              alt=""
+            />
+            <figcaption
+              class="background__caption--left h3 animate--slide-from-left"
+            >
+              Bae in bed.
+            </figcaption>
+          </button>
+        </div>
+      </section>
+      <!-- Growing Image to Fullscreen -->
+      <section id="section-8" class="section section--fullscreen">
+        <div class="background animate--grow-fullscreen">
+          <button class="image__link" data-status="" type="button">
+            <img
+              src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+              alt=""
+              class="background__image image--cover"
+            />
+          </button>
+        </div>
+      </section>
+      <!-- Masonry Grid -->
+      <section id="section-9" class="section margin--bottom--32px">
         <div class="section__wrapper">
-          <div class="section__row">
-            <div class="section__col">
-              <div class="slider border--all">
-                <ul class="section__items slider__items">
-                  <li
-                    class="section__item slider__item background"
-                    style="
-                      background-image: url(<%=require(
-                          './assets/images/day2-skullrock2.jpg'
-                        )%>);
-                    "
-                  >
-                    <img
-                      src="<%=require(
-                            './assets/images/day2-skullrock2.jpg'
-                          )%>"
-                      alt=""
-                      class="section__image slider__image visually-hidden"
-                    />
-                    <figcaption class="section__caption--right h3">
-                      Caption here.
-                    </figcaption>
-                  </li>
-                  <li
-                    class="section__item slider__item background"
-                    style="
-                      background-image: url(<%=require(
-                          './assets/images/day2-skullrock3.jpg'
-                        )%>);
-                    "
-                  >
-                    <img
-                      src="<%=require(
-                            './assets/images/day2-skullrock3.jpg'
-                          )%>"
-                      alt=""
-                      class="section__image slider__image visually-hidden"
-                    />
-                    <figcaption class="section__caption--right h3">
-                      Different caption here.
-                    </figcaption>
-                  </li>
-                  <li
-                    class="section__item slider__item background"
-                    style="
-                      background-image: url(<%=require(
-                          './assets/images/day2-skullrock4.jpg'
-                        )%>);
-                    "
-                  >
-                    <img
-                      src="<%=require(
-                            './assets/images/day2-skullrock4.jpg'
-                          )%>"
-                      alt=""
-                      class="section__image slider__image visually-hidden"
-                    />
-                    <figcaption class="section__caption--right h3">
-                      3rd caption here.
-                    </figcaption>
-                  </li>
-                </ul>
-              </div>
+          <div class="section__row--grid grid--masonry">
+            <div class="grid__item item1">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item2">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item3">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item4">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-couple1.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item5">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item6">
+              <button class="image__link" data-status="" type="button">
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock2.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
+            </div>
+            <div class="grid__item item7">
+              <button class="image__link" data-status="">
+                <img
+                  src="<%=require('./assets/images/day2-brandon-skullrock3.jpg')%>"
+                  alt=""
+                  class="image--cover"
+                />
+              </button>
             </div>
           </div>
         </div>
       </section>
       <!-- Home Again -->
-      <section id="section-7" class="section">
+      <section id="section-6" class="section">
         <div class="section__wrapper">
           <div class="section__row content--left">
             <div class="section__col">
               <div class="section__image-container animate--slide-from-bottom">
-                <img
-                  class="
-                    section__image
-                    border--all
-                    image--cover
-                    animate--slide-from-bottom
-                  "
-                  src="<%=require('./assets/images/day2-skullrock3.jpg')%>"
-                  alt=""
-                />
+                <button class="image__link" data-status="" type="button">
+                  <img
+                    class="
+                      section__image
+                      border--all
+                      image--cover
+                      animate--slide-from-bottom
+                    "
+                    src="<%=require('./assets/images/day2-skullrock3.jpg')%>"
+                    alt=""
+                  />
+                </button>
               </div>
             </div>
             <div class="section__col">
@@ -325,7 +350,7 @@
         </div>
       </section>
       <!-- Giant Text Box -->
-      <section id="section-8" class="section border--middle">
+      <section id="section-7" class="section border--middle">
         <div class="section__wrapper">
           <div class="section__row">
             <div class="section__col--flex">
@@ -346,149 +371,109 @@
           </div>
         </div>
       </section>
-      <!-- Growing Image to Fullscreen -->
-      <section id="section-9" class="section section--fullscreen">
-        <div class="background animate--grow-fullscreen">
-          <img
-            src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
-            alt=""
-            class="background__image image--cover"
-          />
-        </div>
-        <!-- <div class="background animate--grow-fullscreen">
-          <div
-            class="background__image"
-            style="
-              background-image: url(<%=require(
-                  './assets/images/day2-skullrock4.jpg'
-                )%>);
-            "
-          >
-            <img
-              class="visually-hidden"
-              src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
-              alt=""
-            />
-          </div>
-        </div> -->
-      </section>
-      <!-- Masonry Grid -->
-      <section id="section-10" class="section margin--bottom--32px">
+
+      <!-- Scroll Slider -->
+      <section
+        id="section-10"
+        class="section section--fullscreen section__slider"
+      >
         <div class="section__wrapper">
-          <div class="section__row--grid grid--masonry">
-            <div
-              class="grid__item item1"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-skullrock4.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-skullrock4.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
+          <div class="section__row">
+            <div class="section__col">
+              <div class="slider border--all">
+                <ul class="section__items slider__items">
+                  <li class="section__item slider__item background">
+                    <button class="image__link" data-status="" type="button">
+                      <img
+                        src="<%=require(
+                            './assets/images/day2-skullrock2.jpg'
+                          )%>"
+                        alt=""
+                        class="section__image slider__image image--cover"
+                      />
+                      <figcaption class="section__caption--right h3">
+                        Caption here.
+                      </figcaption>
+                    </button>
+                  </li>
+                  <li class="section__item slider__item background">
+                    <button class="image__link" data-status="" type="button">
+                      <img
+                        src="<%=require(
+                            './assets/images/day2-skullrock3.jpg'
+                          )%>"
+                        alt=""
+                        class="section__image slider__image image--cover"
+                      />
+                      <figcaption class="section__caption--right h3">
+                        Different caption here.
+                      </figcaption>
+                    </button>
+                  </li>
+                  <li class="section__item slider__item background">
+                    <button class="image__link" data-status="" type="button">
+                      <img
+                        src="<%=require(
+                            './assets/images/day2-skullrock4.jpg'
+                          )%>"
+                        alt=""
+                        class="section__image slider__image image--cover"
+                      />
+                      <figcaption class="section__caption--right h3">
+                        3rd caption here.
+                      </figcaption>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="grid__item item2"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-skullrock5.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-            <div
-              class="grid__item item3"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-brandon-skullrock.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-brandon-skullrock.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-            <div
-              class="grid__item item4"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-couple1.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-couple1.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-            <div
-              class="grid__item item5"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-skullrock5.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-skullrock5.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-            <div
-              class="grid__item item6"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-brandon-skullrock2.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-brandon-skullrock2.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-            <div
-              class="grid__item item7"
-              style="
-                background-image: url(<%=require(
-                    './assets/images/day2-brandon-skullrock3.jpg'
-                  )%>);
-              "
-            >
-              <img
-                src="<%=require('./assets/images/day2-brandon-skullrock3.jpg')%>"
-                alt=""
-                class="visually-hidden"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FullScreen Image -->
-      <section id="section-11" class="section">
-        <div class="section__wrapper">
-          <div class="section__row border--all">
-            <img
-              class="section__image image--cover"
-              src="<%=require('./assets/images/day2-couple2.jpg')%>"
-              alt=""
-            />
           </div>
         </div>
       </section>
     </main>
+    <!-- Lightbox -->
+    <div class="modal" id="modal-1" aria-hidden="true">
+      <div
+        tabindex="-1"
+        class="modal__container"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-1-title"
+      >
+        <header class="modal__header">
+          <h2 class="visually-hidden" id="modal-1-title">Lightbox</h2>
+
+          <button
+            class="modal__close icon__button"
+            aria-label="Close modal"
+            data-micromodal-close
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </header>
+
+        <div class="modal__content lightbox" id="modal-1-content">
+          <div class="lightbox__track">
+            <ul class="lightbox__items"></ul>
+          </div>
+          <div class="lightbox__nav">
+            <button
+              class="lightbox__button--prev icon__button"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="lightbox__button--next icon__button"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
