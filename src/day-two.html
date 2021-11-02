@@ -209,7 +209,7 @@
         <div class="background">
           <button class="image__link" data-status="" type="button">
             <img
-              class="visually-hidden"
+              class="image--cover"
               src="<%=require('./assets/images/day2-house-inside.jpg')%>"
               alt=""
             />
@@ -431,6 +431,7 @@
         </div>
       </section>
     </main>
+
     <!-- Lightbox -->
     <div class="modal" id="modal-1" aria-hidden="true">
       <div
@@ -456,21 +457,31 @@
           <div class="lightbox__track">
             <ul class="lightbox__items"></ul>
           </div>
-          <div class="lightbox__nav">
+          <div class="lightbox__buttons">
             <button
               class="lightbox__button--prev icon__button"
-              aria-label="Close modal"
-              data-micromodal-close
+              aria-label="Previous Slide"
             >
               <i class="fas fa-chevron-left"></i>
             </button>
             <button
               class="lightbox__button--next icon__button"
-              aria-label="Close modal"
-              data-micromodal-close
+              aria-label="Next Slide"
             >
               <i class="fas fa-chevron-right"></i>
             </button>
+            <button
+              id="lightbox__nav-button"
+              class="lightbox__button--nav icon__button"
+              aria-label="Open/Close Lightbox Navigation"
+            >
+              <i class="fas fa-chevron-up"></i>
+            </button>
+          </div>
+          <div class="lightbox__nav">
+            <div class="lightbox__wrapper">
+              <ul class="lightbox__grid grid--square"></ul>
+            </div>
           </div>
         </div>
       </div>

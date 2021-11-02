@@ -40,6 +40,7 @@ $positions: 'top', 'right', 'bottom', 'left';
 
 // Colors
 $black: #363636;
+$grey: #777777;
 $white: #ffffff;
 $brown: #906e56;
 $mauve: #bd9a8b;
@@ -72,6 +73,9 @@ $btn-border-radius: 0;
 // Border
 $base-border-color: $text-pink;
 $base-border: 5px solid $base-border-color;
+
+// Box Shadow
+$base-box-shadow: 0px 0px 5px 1px #777777;
 
 // Background Colors
 $viewport-background-color: $white;

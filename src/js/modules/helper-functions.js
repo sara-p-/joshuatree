@@ -150,7 +150,7 @@ export function imageObject(imageButtons) {
 }
 
 // Function to assign all of the various data-attributes and classes to the previous/current/next slides
-export function slideStatus(currentSlide, direction = null) {
+export function slideStatus(currentSlide) {
   // Variables
   const slideList = document.querySelector('.lightbox__items')
   const allSlides = document.querySelectorAll('.lightbox__item')

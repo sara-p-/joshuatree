@@ -51,7 +51,7 @@
   &__item {
     @include fullscreen;
     position: absolute;
-    left: 100%;
+    left: 0;
     top: 0;
   }
   &__image {
@@ -59,7 +59,7 @@
     height: 100%;
     object-fit: contain;
   }
-  &__nav {
+  &__buttons {
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -67,7 +67,6 @@
   &__button {
     position: absolute;
     pointer-events: auto;
-    top: 0;
     z-index: 9;
     &--prev {
       @extend .lightbox__button;
@@ -78,6 +77,52 @@
       @extend .lightbox__button;
       right: 0;
       border-right: none;
+    }
+    &--nav {
+      @extend .lightbox__button;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      border-right: none;
+      border-bottom: none;
+      z-index: 11;
+      &.active {
+        i {
+          transform: rotateX(180deg);
+        }
+      }
+    }
+  }
+  &__nav {
+    @include fullscreen;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: $white;
+    overflow: scroll;
+    box-shadow: $base-box-shadow;
+  }
+  &__wrapper {
+    @include fullscreen;
+    max-width: $site-width-1200;
+    padding: $spacing-32;
+    margin: 0 auto;
+    @include flex;
+  }
+  &__grid {
+    .grid {
+      &__item {
+        border: none;
+        &--current {
+          border: $base-border;
+        }
+      }
+      &__button {
+        &:hover {
+          box-shadow: $base-box-shadow;
+        }
+      }
     }
   }
 }

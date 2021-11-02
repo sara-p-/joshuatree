@@ -111,3 +111,44 @@ export function slideToRight(item, duration = 0.5) {
   })
   return t1
 }
+
+// Function to move all of the slides left and place the current image in the center
+export function moveTheSlidesLeft(item, index, currentSlide) {
+  if (index < currentSlide.dataset.order) {
+    slideToCenter(item)
+    slideToLeft(item)
+  }
+  if (index == currentSlide.dataset.order) {
+    slideToCenter(item)
+  }
+}
+
+// Function to move all of the slides right and place the current image in the center
+export function moveTheSlidesRight(item, index, currentSlide) {
+  if (index > currentSlide.dataset.order) {
+    slideToCenter(item)
+    slideToRight(item)
+  }
+  if (index == currentSlide.dataset.order) {
+    slideToCenter(item)
+  }
+}
+
+// ****************** Lightbox Navigation ******************** //
+export const navTimeline = gsap.timeline({ paused: true })
+export function moveLightboxNav(button, nav) {
+  navTimeline
+    .to(nav, {
+      y: 0,
+      duration: 0.5,
+    })
+    .to(
+      button,
+      {
+        y: 0,
+        duration: 0.5,
+      },
+      '-=0.3'
+    )
+    .reverse()
+}
