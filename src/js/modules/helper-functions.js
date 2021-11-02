@@ -150,8 +150,11 @@ export function imageObject(imageButtons) {
 }
 
 // Function to assign all of the various data-attributes and classes to the previous/current/next slides
-export function slideStatus(allSlides, currentSlide) {
-  // Remove the status classes
+export function slideStatus(currentSlide, direction = null) {
+  // Variables
+  const slideList = document.querySelector('.lightbox__items')
+  const allSlides = document.querySelectorAll('.lightbox__item')
+  // Remove the status classes from everything
   allSlides.forEach((item) => {
     item.classList.remove('item__current', 'item__previous', 'item__next')
   })
@@ -173,11 +176,11 @@ export function slideStatus(allSlides, currentSlide) {
   }
   const nextString = nextIndex.toString()
 
-  const previousSlide = allSlides.querySelector(
+  const previousSlide = slideList.querySelector(
     '[data-order="' + previousString + '"'
   )
   previousSlide.classList.add('item__previous')
 
-  const nextSlide = allSlides.querySelector('[data-order="' + nextString + '"')
+  const nextSlide = slideList.querySelector('[data-order="' + nextString + '"')
   nextSlide.classList.add('item__next')
 }

@@ -87,7 +87,7 @@ export function animations() {
 }
 
 // ****************** Lightbox Animations ******************** //
-export function slideToCenter(item, duration = 0.3) {
+export function slideToCenter(item, duration = 0.5) {
   const t1 = gsap.timeline()
   t1.to(item, {
     x: 0,
@@ -95,7 +95,7 @@ export function slideToCenter(item, duration = 0.3) {
   })
   return t1
 }
-export function slideToLeft(item, duration = 0.3) {
+export function slideToLeft(item, duration = 0.5) {
   const t1 = gsap.timeline()
   t1.to(item, {
     x: '-100%',
@@ -103,7 +103,7 @@ export function slideToLeft(item, duration = 0.3) {
   })
   return t1
 }
-export function slideToRight(item, duration = 0.3) {
+export function slideToRight(item, duration = 0.5) {
   const t1 = gsap.timeline()
   t1.to(item, {
     x: '100%',

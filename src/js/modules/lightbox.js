@@ -33,9 +33,9 @@ export default function lightbox() {
         lightboxItems.append(item)
       })
       // Grab all the slides, and set the various classes and data-attributes to define their location
-      const currentSlide = document.querySelector('.item__current')
       const allItems = document.querySelectorAll('.lightbox__item')
-      slideStatus(allItems, currentSlide)
+      const currentSlide = document.querySelector('.item__current')
+      slideStatus(currentSlide)
 
       // Animate the slides until the selected slide is shown
 
@@ -56,9 +56,12 @@ export default function lightbox() {
 
   // ******************* On click of navigation, change the images ******************* //
   prev.addEventListener('click', (e) => {
-    const allSlides = document.querySelectorAll('.lightbox__item')
-    const currentSlide = document.querySelector('.item__current')
     const previousSlide = document.querySelector('.item__previous')
-    slideStatus(allSlides, previousSlide)
+    const currentSlide = document.querySelector('.item__current')
+    const nextSlide = document.querySelector('.item__next')
+    slideToRight(currentSlide)
+    slideToCenter(previousSlide)
+
+    slideStatus(previousSlide, 'previous')
   })
 }
