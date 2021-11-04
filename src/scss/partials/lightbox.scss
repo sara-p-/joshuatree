@@ -114,14 +114,16 @@
     .grid {
       &__item {
         border: none;
-        &--current {
-          border: $base-border;
-        }
       }
       &__button {
         &:hover {
           box-shadow: $base-box-shadow;
         }
+      }
+    }
+    .item {
+      &--current {
+        border: $base-border;
       }
     }
   }

@@ -150,18 +150,22 @@ export function imageObject(imageButtons) {
 }
 
 // Function to assign all of the various data-attributes and classes to the previous/current/next slides
-export function slideStatus(currentSlide) {
+export function slideStatus(currentSlide, grid = false) {
   // Variables
-  const slideList = document.querySelector('.lightbox__items')
-  const allSlides = document.querySelectorAll('.lightbox__item')
+  let slideList = document.querySelector('.lightbox__items')
+  let allSlides = document.querySelectorAll('.lightbox__item')
+  if (grid) {
+    slideList = document.querySelector('.lightbox__grid')
+    allSlides = document.querySelectorAll('.grid__item')
+  }
   // Remove the status classes from everything
   allSlides.forEach((item) => {
-    item.classList.remove('item__current', 'item__previous', 'item__next')
+    item.classList.remove('item--current', 'item--previous', 'item--next')
   })
 
   // Add the status classes back
   const currentIndex = currentSlide.dataset.order
-  currentSlide.classList.add('item__current')
+  currentSlide.classList.add('item--current')
   const number = parseInt(currentIndex)
   let previousIndex = number - 1
   let nextIndex = number + 1
@@ -169,18 +173,41 @@ export function slideStatus(currentSlide) {
   if (previousIndex < 0) {
     previousIndex = allSlides.length - 1
   }
-  const previousString = previousIndex.toString()
-
   if (nextIndex > allSlides.length - 1) {
     nextIndex = 0
   }
-  const nextString = nextIndex.toString()
 
   const previousSlide = slideList.querySelector(
-    '[data-order="' + previousString + '"'
+    '[data-order="' + previousIndex + '"'
   )
-  previousSlide.classList.add('item__previous')
+  previousSlide.classList.add('item--previous')
 
-  const nextSlide = slideList.querySelector('[data-order="' + nextString + '"')
-  nextSlide.classList.add('item__next')
+  const nextSlide = slideList.querySelector('[data-order="' + nextIndex + '"')
+  nextSlide.classList.add('item--next')
+}
+
+// Function to grab the relevent slides at specific times
+export function theCurrentSlides() {
+  const previousSlide = document.querySelector(
+    '.lightbox__items .item--previous'
+  )
+  const currentSlide = document.querySelector('.lightbox__items .item--current')
+  const nextSlide = document.querySelector('.lightbox__items .item--next')
+  const previousGridItem = document.querySelector(
+    '.lightbox__grid .item--previous'
+  )
+  const currentGridItem = document.querySelector(
+    '.lightbox__grid .item--current'
+  )
+  const nextGridItem = document.querySelector('.lightbox__grid .item--next')
+  const object = {
+    previous: previousSlide,
+    current: currentSlide,
+    next: nextSlide,
+    gridPrevious: previousGridItem,
+    gridCurrent: currentGridItem,
+    gridNext: nextGridItem,
+  }
+
+  return object
 }

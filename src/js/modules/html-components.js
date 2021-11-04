@@ -5,7 +5,7 @@ export function createLightboxItems(item) {
   li.setAttribute('data-status', item.status)
   li.setAttribute('data-order', item.order)
   if (item.status == 'current') {
-    li.classList.add('item__current')
+    li.classList.add('item--current')
   }
 
   const img = document.createElement('img')
@@ -33,7 +33,7 @@ export function createLightboxNavItems(item) {
   li.setAttribute('data-status', item.status)
   li.setAttribute('data-order', item.order)
   if (item.status == 'current') {
-    li.classList.add('grid__item--current')
+    li.classList.add('item--current')
   }
 
   const button = document.createElement('button')

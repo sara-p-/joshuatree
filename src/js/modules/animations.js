@@ -122,15 +122,21 @@ export function moveTheSlidesLeft(item, index, currentSlide) {
     slideToCenter(item)
   }
 }
-
-// Function to move all of the slides right and place the current image in the center
-export function moveTheSlidesRight(item, index, currentSlide) {
-  if (index > currentSlide.dataset.order) {
-    slideToCenter(item)
-    slideToRight(item)
+// Function to move all of the slides left or right and place the current image in the center
+export function moveTheSlides(slide, index, currentSlide) {
+  const allSlides = document.querySelectorAll(
+    '.lightbox__items .lightbox__item'
+  )
+  if (index < currentSlide.dataset.order) {
+    slideToCenter(slide)
+    slideToRight(slide)
   }
-  if (index == currentSlide.dataset.order) {
-    slideToCenter(item)
+  if (index > currentSlide.dataset.order) {
+    slideToCenter(slide)
+    slideToLeft(slide)
+  }
+  if (index == slide.dataset.order) {
+    slideToCenter(slide)
   }
 }
 
