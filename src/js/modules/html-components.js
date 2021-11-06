@@ -1,12 +1,12 @@
 // Function to create the lightbox items
 export function createLightboxItems(item) {
   const li = document.createElement('li')
-  li.classList.add('lightbox__item', 'item__' + item.order)
-  li.setAttribute('data-status', item.status)
-  li.setAttribute('data-order', item.order)
-  if (item.status == 'current') {
-    li.classList.add('item--current')
-  }
+  li.classList.add('lightbox__item', 'glide__slide', 'item__' + item.order)
+  // li.setAttribute('data-status', item.status)
+  // li.setAttribute('data-order', item.order)
+  // if (item.status == 'current') {
+  //   li.classList.add('item--current')
+  // }
 
   const img = document.createElement('img')
   img.classList.add('lightbox__image')
@@ -28,7 +28,7 @@ export function createLightboxItems(item) {
 
 // Function to create the lightbox nav items
 export function createLightboxNavItems(item) {
-  const li = document.createElement('li')
+  const li = document.createElement('div')
   li.classList.add('grid__item', 'item__' + item.order)
   li.setAttribute('data-status', item.status)
   li.setAttribute('data-order', item.order)
