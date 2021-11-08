@@ -1,15 +1,10 @@
 // Function to create the lightbox items
 export function createLightboxItems(item) {
   const li = document.createElement('li')
-  li.classList.add('lightbox__item', 'glide__slide', 'item__' + item.order)
-  // li.setAttribute('data-status', item.status)
-  // li.setAttribute('data-order', item.order)
-  // if (item.status == 'current') {
-  //   li.classList.add('item--current')
-  // }
+  li.classList.add('glide__slide', 'item__' + item.order)
 
   const img = document.createElement('img')
-  img.classList.add('lightbox__image')
+  img.classList.add('glide__image')
   img.src = item.image
   img.alt = item.alt
 
@@ -17,7 +12,7 @@ export function createLightboxItems(item) {
 
   if (item.caption !== '') {
     const figcaption = document.createElement('figcaption')
-    figcaption.classList.add('lightbox__caption')
+    figcaption.classList.add('glide__caption')
     figcaption.innerText = item.caption
 
     li.append(figcaption)

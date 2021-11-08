@@ -16,12 +16,11 @@ import {
 export default function glideLightbox() {
   MicroModal.init()
   // ******************* Variables ******************* //
-  const modal = document.querySelector('#modal-1')
   const imageLinks = document.querySelectorAll('section button.image__link')
   const modalClose = document.querySelector('button.modal__close')
-  const lightboxItems = document.querySelector('.lightbox__items')
-  const prev = document.querySelector('.lightbox__button--prev')
-  const next = document.querySelector('.lightbox__button--next')
+  const lightboxItems = document.querySelector('.glide__slides')
+  const prev = document.querySelector('.glide__button--prev')
+  const next = document.querySelector('.glide__button--next')
   const lightboxNav = document.querySelector('.lightbox__nav')
   const lightboxGrid = document.querySelector('.lightbox__grid')
   const navButton = document.querySelector('#lightbox__nav-button')
@@ -45,17 +44,18 @@ export default function glideLightbox() {
   })
 
   // ******************* Init Glide.js ******************* //
-  new Glide('.glide', {
+  let glider = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
-    perView: 1,
+    gap: 0,
   }).mount()
 
-  // ******************* Open the Modal ******************* //
-  imageLinks.forEach((link) => {
+  // ******************* Open the Modal (and update Glide) ******************* //
+  imageLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       // Open the modal
       MicroModal.show('modal-1')
+      glider.update({ startAt: index })
     })
   })
   // ******************* Close the Modal ******************* //

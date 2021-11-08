@@ -15,9 +15,12 @@
     display: block;
   }
   &__container {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
+    @include fullscreen;
+  }
+  &__content {
     @include fullscreen;
   }
   &__header {
@@ -47,33 +50,91 @@
   &__slide {
     @include fullscreen;
   }
-}
-
-.lightbox {
-  @include fullscreen;
-  // @include flex;
-  // &__track {
-  //   @include fullscreen;
-  // }
-  // &__items {
-  //   @include fullscreen;
-  //   @include clear-list;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  // }
-  // &__item {
-  //   @include fullscreen;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  // }
   &__image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+  &__buttons {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    top: 50%;
+  }
+  &__button {
+    position: absolute;
+    pointer-events: auto;
+    z-index: 9;
+    &--prev {
+      @extend .glide__button;
+      left: 0;
+      border-left: none;
+    }
+    &--next {
+      @extend .glide__button;
+      right: 0;
+      border-right: none;
+    }
+    &--nav {
+      @extend .glide__button;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      border-right: none;
+      border-bottom: none;
+      z-index: 11;
+      &.active {
+        i {
+          transform: rotateX(180deg);
+        }
+      }
+    }
+  }
+  &__nav {
+    @include fullscreen;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: $white;
+    overflow: scroll;
+    box-shadow: $base-box-shadow;
+  }
+  &__wrapper {
+    @include fullscreen;
+    max-width: $site-width-1200;
+    padding: $spacing-32;
+    margin: 0 auto;
+    @include flex;
+  }
+  &__grid {
+    .grid {
+      &__item {
+        border: none;
+      }
+      &__button {
+        &:hover {
+          box-shadow: $base-box-shadow;
+        }
+      }
+    }
+    .item {
+      &--current {
+        border: $base-border;
+      }
+    }
+  }
+}
+
+.lightbox {
+  // @include fullscreen;
+  // &__image {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: contain;
+  // }
   // &__buttons {
   //   position: absolute;
   //   width: 100%;
