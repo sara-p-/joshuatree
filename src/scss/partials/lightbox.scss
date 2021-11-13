@@ -46,6 +46,7 @@
   }
   &__slides {
     @include fullscreen;
+    margin: 0;
   }
   &__slide {
     @include fullscreen;
